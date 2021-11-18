@@ -5,6 +5,7 @@
 	- [1. Constant](#constants)
 	- [2. Methods](#methods)
 		- [2.1. Attributs](#attributs)
+		- [2.2. Privates Methods](#privates-methods)
 	- [3. Constructor](#constructor)
 	- [4. Connection and Disconnection](#connect-and-disconnect)
 	- [5. Send and Receive](#send-and-receive)
@@ -45,6 +46,39 @@
 | int  |        | port     | Server Port      |
 | int  |        | id       | User ID          |
 | int  |        | state    | Connection State |
+
+# Privates Methods
+## setState
+`void setState(int state)` is used to set the Net connection state (`NET_CONNECTED` or `NET_DISCONNECTED` ([See Constants](#constants)))
+| Parameter | Parameter Type | Length | Value                                 |
+| --------- | -------------- | ------ | ------------------------------------- |
+| state     | int            |        | `NET_CONNECTED` or `NET_DISCONNECTED` |
+## randomInt
+`int randomInt(int min, int max)` is used to generate a random int between min and max ([min;max])
+> Return: int in [min;max]
+
+| Parameter | Parameter Type |
+| --------- | -------------- |
+| min       | int            |
+| max       | int            |
+## intToBytes
+`void intToBytes(char* bytes, int number, int len_bytes, int offset)` is used to prepare int values to be send
+| Parameter | Parameter Type | Length    | Value                 |
+| --------- | -------------- | --------- | --------------------- |
+| bytes     | char*          |           | `sizeof(message) + 3` |
+| number    | int            |           |                       |
+| len_bytes | int            |           |                       |
+| offset    | int            |           | 0                     |
+> `len_bytes` is the number of bytes for encode `number`
+
+## strToBytes
+`void strToBytes(char* bytes, char *message, int len, int offset)` is used to prepare string values to be send (use `intToBytes`)
+| Parameter  | Parameter Type | Length    | Value                 |
+| ---------- | -------------- | ------    | --------------------- |
+| bytes      | char*          |           | `sizeof(message) + 3` |
+| message    | char*          | len       |                       |
+| len        | int            |           | `sizeof(message)`     |
+| offset     | int            |           | 0                     |
 
 # Constructor
 The constructor can take parameters or not: [See Methods](#methods).<br>
