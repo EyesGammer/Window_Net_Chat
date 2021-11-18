@@ -124,7 +124,7 @@ int main(){
 
 ## 6.2. Methods
 
-### 6.2.1. Basics Methods
+### 6.2.1. Basic Methods
 ```c++
 #include "Net.h"
 using namespace std;
