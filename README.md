@@ -14,7 +14,7 @@
 		- [6.1. Constructor](#61-constructor)
 		- [6.2. Methods](#62-methods)
 			- [6.2.1. Basic Methods](#621-basic-methods)
-			- [6.2.2. Other](#622-other)
+		- [6.3. Other](#63-other)
 	- [7. Used librairies](#used-librairies)
 
 # Constants
@@ -137,7 +137,7 @@ int main(){
 }
 ```
 
-### 6.2.2. Other
+## 6.3. Other
 ```c++
 #include "Net.h"
 using namespace std;
