@@ -3,7 +3,7 @@
 
 - [Class Net Documentation 1.0](#class-net-documentation-10)
 	- [1. Constant](#constants)
-	- [2. Methods](#methods)
+	- [2. Public Methods](#public-methods)
 		- [2.1. Attributs](#attributs)
 		- [2.2. Private Methods](#private-methods)
 	- [3. Constructor](#constructor)
@@ -18,7 +18,7 @@
 - `NET_CONNECTED` | Connected to server
 - `NET_DISCONNECTED` | Not connected to server
 
-# Methods
+# Public Methods
 | Type | Method | Parameters | Parameters Type | Return value |
 | ---- | ------ | ---------- | --------------- | ------------ |
 | Net | Constructor |
