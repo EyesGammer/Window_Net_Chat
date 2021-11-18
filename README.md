@@ -11,6 +11,10 @@
 	- [4. Connection and Disconnection](#connect-and-disconnect)
 	- [5. Send and Receive](#send-and-receive)
 	- [6. Examples](#examples)
+		- [6.1. Constructor](#61-constructor)
+		- [6.2. Methods](#62-methods)
+			- [6.2.1. Basic Methods](#621-basic-methods)
+			- [6.2.2. Other](#622-other)
 	- [7. Used librairies](#used-librairies)
 
 # Constants
@@ -38,7 +42,7 @@
 | void | chatDisconnect() | | | Disconnect the User |
 | void | chatSend() | message, len | char *, int |
 | void | charReceive() | message, len | char *, int |
-> [See examples](#2-methods)
+> [See examples](#62-methods)
 
 # Attributs
 | Type | Length | Attribut | Usage            |
@@ -88,7 +92,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 + `int port` is the server Port to use.<br>
 + `char *name` is the Username to set.<br>
 + `int id` is the User ID.<br>
-> [See examples](#1-constructor)
+> [See examples](#61-constructor)
 
 # Connect and Disconnect
 + `int chatConnect()` allow you to connect to the server
@@ -106,7 +110,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 	> The received message will be save in the message variable<br>The receiver variable need to be clean after usage: `fill_n(receiver, 1024, 0)`
 
 # Examples
-## 1. Constructor
+## 6.1. Constructor
 ```c++
 #include "Net.h";
 using namespace std;
@@ -118,9 +122,9 @@ int main(){
 }
 ```
 
-## 2. Methods
+## 6.2. Methods
 
-### 2.1. Basics Methods
+### 6.2.1. Basics Methods
 ```c++
 #include "Net.h"
 using namespace std;
@@ -133,7 +137,7 @@ int main(){
 }
 ```
 
-### 2.2. Other
+### 6.2.2. Other
 ```c++
 #include "Net.h"
 using namespace std;
