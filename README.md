@@ -5,7 +5,7 @@
 	- [1. Constant](#constants)
 	- [2. Methods](#methods)
 		- [2.1. Attributs](#attributs)
-		- [2.2. Privates Methods](#privates-methods)
+		- [2.2. Private Methods](#private-methods)
 	- [3. Constructor](#constructor)
 	- [4. Connection and Disconnection](#connect-and-disconnect)
 	- [5. Send and Receive](#send-and-receive)
@@ -47,7 +47,7 @@
 | int  |        | id       | User ID          |
 | int  |        | state    | Connection State |
 
-# Privates Methods
+# Private Methods
 ## setState
 `void setState(int state)` is used to set the Net connection state (`NET_CONNECTED` or `NET_DISCONNECTED` ([See Constants](#constants)))
 | Parameter | Parameter Type | Length | Value                                 |
