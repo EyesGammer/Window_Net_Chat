@@ -99,6 +99,8 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 
 + `void chatDisconnect()` allow you to disconnect to the server
 
+> [See Example](#63-other)
+
 # Send and Receive
 + `void chatSend()` allow you to send message to the server.
 	- `char *message` is the message to send
