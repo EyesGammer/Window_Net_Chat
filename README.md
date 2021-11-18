@@ -3,7 +3,7 @@
 
 - [Class Net Documentation 1.0](#class-net-documentation-10)
 	- [1. Constant](#constants)
-	- [2. Public Methods](#public-methods)
+	- [2. Methods](#methods)
 		- [2.1. Attributs](#attributs)
 		- [2.2. Private Methods](#private-methods)
 	- [3. Constructor](#constructor)
@@ -18,7 +18,8 @@
 - `NET_CONNECTED` | Connected to server
 - `NET_DISCONNECTED` | Not connected to server
 
-# Public Methods
+# Methods
+## Public Methods
 | Type | Method | Parameters | Parameters Type | Return value |
 | ---- | ------ | ---------- | --------------- | ------------ |
 | Net | Constructor |
@@ -47,13 +48,13 @@
 | int  |        | id       | User ID          |
 | int  |        | state    | Connection State |
 
-# Private Methods
-## setState
+## Private Methods
+### setState
 `void setState(int state)` is used to set the Net connection state (`NET_CONNECTED` or `NET_DISCONNECTED` ([See Constants](#constants)))
 | Parameter | Parameter Type | Length | Value                                 |
 | --------- | -------------- | ------ | ------------------------------------- |
 | state     | int            |        | `NET_CONNECTED` or `NET_DISCONNECTED` |
-## randomInt
+### randomInt
 `int randomInt(int min, int max)` is used to generate a random int between min and max ([min;max])
 > Return: int in [min;max]
 
@@ -61,7 +62,7 @@
 | --------- | -------------- |
 | min       | int            |
 | max       | int            |
-## intToBytes
+### intToBytes
 `void intToBytes(char* bytes, int number, int len_bytes, int offset)` is used to prepare int values to be send
 | Parameter | Parameter Type | Length    | Value                 |
 | --------- | -------------- | --------- | --------------------- |
@@ -71,7 +72,7 @@
 | offset    | int            |           | 0                     |
 > `len_bytes` is the number of bytes for encode `number`
 
-## strToBytes
+### strToBytes
 `void strToBytes(char* bytes, char *message, int len, int offset)` is used to prepare string values to be send (use `intToBytes`)
 | Parameter  | Parameter Type | Length    | Value                 |
 | ---------- | -------------- | ------    | --------------------- |
