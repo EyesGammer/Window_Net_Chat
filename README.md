@@ -65,12 +65,12 @@
 | max       | int            |
 ### intToBytes
 `void intToBytes(char* bytes, int number, int len_bytes, int offset)` is used to prepare int values to be send
-| Parameter | Parameter Type | Length    | Value                 |
-| --------- | -------------- | --------- | --------------------- |
-| bytes     | char*          |           | `sizeof(message) + 3` |
-| number    | int            |           |                       |
-| len_bytes | int            |           |                       |
-| offset    | int            |           | 0                     |
+| Parameter | Parameter Type | Value                 |
+| --------- | -------------- | --------------------- |
+| bytes     | char*          | `sizeof(message) + 3` |
+| number    | int            |                       |
+| len_bytes | int            |                       |
+| offset    | int            | 0                     |
 > `len_bytes` is the number of bytes for encode `number`
 
 ### strToBytes
