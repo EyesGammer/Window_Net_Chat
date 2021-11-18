@@ -13,7 +13,6 @@
 	- [6. Examples](#examples)
 		- [6.1. Constructor](#61-constructor)
 		- [6.2. Methods](#62-methods)
-			- [6.2.1. Basic Methods](#621-basic-methods)
 		- [6.3. Other](#63-other)
 	- [7. Used librairies](#used-librairies)
 
@@ -123,8 +122,6 @@ int main(){
 ```
 
 ## 6.2. Methods
-
-### 6.2.1. Basic Methods
 ```c++
 #include "Net.h"
 using namespace std;
