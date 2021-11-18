@@ -34,4 +34,4 @@
 | void | chatSend() | message, len | char *, int |
 | void | charReceive() | message, len | char *, int |
 
-# Attributs
+## Attributs
