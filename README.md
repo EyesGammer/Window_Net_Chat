@@ -127,3 +127,8 @@ int main(){
 
 # Used Librairies
 The *Net* class use `string.h`, `winsock2.h` and `ws2tcpip.h`.<br>
+To use the two last, you need to include them.<br>
+They are located at: `C:\Windows\System32\`
+
+### Using GCC
+If you use *G++*, you need to use the `-lwsock32` option
