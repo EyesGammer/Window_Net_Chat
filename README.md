@@ -21,6 +21,7 @@
 - `NET_CONNECTION_ERROR_YES` | Error during connection
 - `NET_CONNECTED` | Connected to server
 - `NET_DISCONNECTED` | Not connected to server
+- `NET_DATA_MAX_SIZE` | Maximum send/received data length
 
 # 2. Methods and Attributs
 ## Public Methods
@@ -32,12 +33,12 @@
 | char * | getIp() | | | Server IP |
 | int | getPort() | | | Server Port |
 | int | getId() | | | User ID |
-| int | getState() | | | `NET_CONNECTED` or `NET_DISCONNECTED` ([See Constants](#constants)) |
+| int | getState() | | | `NET_CONNECTED` or `NET_DISCONNECTED` ([See Constants](#1-constants)) |
 | void | setName() | name | char * |
 | void | setIp() | ip | char * |
 | void | setPort() | port | int |
 | void | setId() | id | int |
-| int | chatConnect() | | | `NET_CONNECTION_ERROR_NO` or `NET_CONNECTION_ERROR_YES` ([See Constants](#constants)) |
+| int | chatConnect() | | | `NET_CONNECTION_ERROR_NO` or `NET_CONNECTION_ERROR_YES` ([See Constants](#1-constants)) |
 | void | chatDisconnect() | | | Disconnect the User |
 | void | chatSend() | message, len | char *, int |
 | void | charReceive() | message, len | char *, int |
@@ -77,16 +78,17 @@
 > `len_bytes` is the number of bytes for encode `number`
 
 ### strToBytes
-`void strToBytes(char* bytes, char *message, int len, int offset)` is used to prepare string values to be send (use `intToBytes`)
+`int strToBytes(char* bytes, char *message, int len, int offset)` is used to prepare string values to be send (use `intToBytes`)
 | Parameter  | Parameter Type | Length    | Value                 |
 | ---------- | -------------- | ------    | --------------------- |
 | bytes      | char*          |           | `sizeof(message) + 3` |
 | message    | char*          | len       |                       |
 | len        | int            |           | `sizeof(message)`     |
 | offset     | int            |           | 0                     |
+> Return: int = last used `message` char index
 
 # 3. Constructor
-The constructor can take parameters or not: [See Methods](#methods).<br>
+The constructor can take parameters or not: [See Methods](#2-methods-and-attributs).<br>
 + `char *ip` is the server IP to use.<br>
 + `int port` is the server Port to use.<br>
 + `char *name` is the Username to set.<br>
@@ -95,7 +97,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 
 # 4. Connect and Disconnect
 + `int chatConnect()` allow you to connect to the server
-	> Return error code ([See Methods](#methods))
+	> Return error code ([See Methods](#2-methods-and-attributs))
 
 + `void chatDisconnect()` allow you to disconnect to the server
 
@@ -105,10 +107,12 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 + `void chatSend()` allow you to send message to the server.
 	- `char *message` is the message to send
 	- `int len` is the message's length
+	> This method will split the message in `NET_DATA_MAX_SIZE` blocks ([See Constants](#1-constants))
+
 + `void chatReceive()` allow you to receive message from the server.
 	- `char *message` is the receiver for the message
 	- `int len` is the receiver array length
-	> The received message will be save in the message variable<br>The receiver variable need to be clean after usage: `fill_n(receiver, 1024, 0)`
+	> The received message will be save in the message variable<br>The receiver variable need to be clean after usage: `fill_n(receiver, 1024, 0)`<bt>The received message will be split into blocks of `NET_DATA_MAX_SIZE` bytes
 
 # 6. Examples
 ## 6.1. Constructor
