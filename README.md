@@ -2,27 +2,27 @@
 > Version: 1.0
 
 - [Class Net Documentation 1.0](#class-net-documentation-10)
-	- [1. Constant](#constants)
-	- [2. Methods and Attributs](#methods-and-attributs)
+	- [1. Constant](#1-constants)
+	- [2. Methods](#2-methods-and-attributs)
 		- [2.1. Public Methods](#public-methods)
 		- [2.2. Attributs](#attributs)
 		- [2.3. Private Methods](#private-methods)
-	- [3. Constructor](#constructor)
-	- [4. Connection and Disconnection](#connect-and-disconnect)
-	- [5. Send and Receive](#send-and-receive)
-	- [6. Examples](#examples)
+	- [3. Constructor](#3-constructor)
+	- [4. Connection and Disconnection](#4-connect-and-disconnect)
+	- [5. Send and Receive](#5-send-and-receive)
+	- [6. Examples](#6-examples)
 		- [6.1. Constructor](#61-constructor)
 		- [6.2. Methods](#62-methods)
 		- [6.3. Other](#63-other)
-	- [7. Used librairies](#used-librairies)
+	- [7. Used librairies](#7-used-librairies)
 
-# Constants
+# 1. Constants
 - `NET_CONNECTION_ERROR_NO` | No connection error
 - `NET_CONNECTION_ERROR_YES` | Error during connection
 - `NET_CONNECTED` | Connected to server
 - `NET_DISCONNECTED` | Not connected to server
 
-# Methods and Attributs
+# 2. Methods and Attributs
 ## Public Methods
 | Type | Method | Parameters | Parameters Type | Return value |
 | ---- | ------ | ---------- | --------------- | ------------ |
@@ -85,7 +85,7 @@
 | len        | int            |           | `sizeof(message)`     |
 | offset     | int            |           | 0                     |
 
-# Constructor
+# 3. Constructor
 The constructor can take parameters or not: [See Methods](#methods).<br>
 + `char *ip` is the server IP to use.<br>
 + `int port` is the server Port to use.<br>
@@ -93,7 +93,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 + `int id` is the User ID.<br>
 > [See examples](#61-constructor)
 
-# Connect and Disconnect
+# 4. Connect and Disconnect
 + `int chatConnect()` allow you to connect to the server
 	> Return error code ([See Methods](#methods))
 
@@ -101,7 +101,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 
 > [See Example](#63-other)
 
-# Send and Receive
+# 5. Send and Receive
 + `void chatSend()` allow you to send message to the server.
 	- `char *message` is the message to send
 	- `int len` is the message's length
@@ -110,7 +110,7 @@ The constructor can take parameters or not: [See Methods](#methods).<br>
 	- `int len` is the receiver array length
 	> The received message will be save in the message variable<br>The receiver variable need to be clean after usage: `fill_n(receiver, 1024, 0)`
 
-# Examples
+# 6. Examples
 ## 6.1. Constructor
 ```c++
 #include "Net.h";
@@ -164,7 +164,7 @@ int main(){
 }
 ```
 
-# Used Librairies
+# 7. Used Librairies
 The *Net* class use `string.h`, `winsock2.h` and `ws2tcpip.h`.<br>
 To use the two last, you need to include them.<br>
 They are located at: `C:\Windows\System32\`
