@@ -85,7 +85,7 @@
 | message    | char*          | len       |                       |
 | len        | int            |           | `sizeof(message)`     |
 | offset     | int            |           | 0                     |
-> Return: int that is the last used `message` char index
+> Return: last used `message` char index
 
 # 3. Constructor
 The constructor can take parameters or not: [See Methods](#2-methods-and-attributs).<br>
