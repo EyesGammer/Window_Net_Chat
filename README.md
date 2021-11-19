@@ -3,7 +3,7 @@
 
 - [Class Net Documentation 1.0](#class-net-documentation-10)
 	- [1. Constant](#constants)
-	- [2. Methods](#methods)
+	- [2. Methods and Attributs](#methods)
 		- [2.1. Public Methods](#public-methods)
 		- [2.2. Attributs](#attributs)
 		- [2.3. Private Methods](#private-methods)
